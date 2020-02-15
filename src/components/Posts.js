@@ -14,7 +14,7 @@ export class Post extends Component {
 
   render() {
     return (
-      <ListGroup >
+      <ListGroup style={{ width: '50%', margin: '0 auto' }} className="list">
         {this.props.articles.map(el => (
           <ListGroupItem key={el.id}>{el.title}</ListGroupItem>
         ))}
