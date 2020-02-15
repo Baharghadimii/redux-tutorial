@@ -5,8 +5,8 @@ import Posts from './Posts';
 
 const App = () => (
   <>
-    <div>
-      <h2>Articles</h2>
+    <div style={{ textAlign: 'center' }}>
+      <h2 >Articles</h2>
       <Posts />
       <List />
     </div>
