@@ -1,16 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const mapStateToProps = state => {
   return { articles: state.articles };
 };
 
 const ConnectedList = ({ articles }) => (
-  <ul>
+
+  <ListGroup style={{ width: '50%', margin: '0 auto' }} className="list">
     {articles.map(el => (
-      <li key={el.id}>{el.title}</li>
+      <ListGroupItem key={el.id}>{el.title}</ListGroupItem>
     ))}
-  </ul>
+  </ListGroup>
 );
 
 const List = connect(mapStateToProps)(ConnectedList);

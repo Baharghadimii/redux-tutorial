@@ -41,7 +41,7 @@ class ConnectedForm extends Component {
         </Form.Group>
         <Button style={{ width: '50%' }} variant="primary" type="submit">
           Submit
-  </Button>
+        </Button>
       </Form>
     );
   }
