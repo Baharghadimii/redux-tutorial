@@ -10,7 +10,7 @@ const App = () => (
       <Posts />
       <List />
     </div>
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <h2>Add a new article</h2>
       <Form />
     </div>

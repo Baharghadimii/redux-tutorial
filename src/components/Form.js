@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addArticle } from "../js/actions/index";
-import { Form } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -32,23 +32,16 @@ class ConnectedForm extends Component {
   render() {
     const { title } = this.state;
     return (
-      <Form style={{}} onSubmit={this.handleSubmit}>
+      <Form style={{ width: '50%', margin: '0 auto', textAlign: 'center' }} onSubmit={this.handleSubmit}>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Title</Form.Label>
           <Form.Control
             id="title"
             value={title}
             onChange={this.handleChange} />
         </Form.Group>
-        {/* <div>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={this.handleChange}
-          />
-        </div> */}
-        <button type="submit">SAVE</button>
+        <Button style={{ width: '50%' }} variant="primary" type="submit">
+          Submit
+  </Button>
       </Form>
     );
   }
