@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getData } from "../js/actions/index";
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
 
 export class Post extends Component {
   constructor(props) {
@@ -13,11 +14,11 @@ export class Post extends Component {
 
   render() {
     return (
-      <ul>
+      <ListGroup >
         {this.props.articles.map(el => (
-          <li key={el.id}>{el.title}</li>
+          <ListGroupItem key={el.id}>{el.title}</ListGroupItem>
         ))}
-      </ul>
+      </ListGroup>
     )
   }
 }
