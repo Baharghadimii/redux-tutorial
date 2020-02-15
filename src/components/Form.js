@@ -26,9 +26,9 @@ class ConnectedForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { title } = this.state;
-    if (title === "") {
-      return null;
-    }
+    // if (title === "") {
+    //   return null;
+    // }
     this.props.addArticle({ title });
     this.setState({ title: "" });
   }
