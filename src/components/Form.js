@@ -26,13 +26,16 @@ class ConnectedForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { title } = this.state;
+    if (title === "") {
+      return null;
+    }
     this.props.addArticle({ title });
     this.setState({ title: "" });
   }
   render() {
     const { title } = this.state;
     return (
-      <Form style={{ width: '50%', margin: '0 auto', textAlign: 'center' }} onSubmit={this.handleSubmit}>
+      <Form style={{ width: '50%', margin: '0 auto', textAlign: 'center' }} onSubmit={this.handleSubmit} required>
         <Form.Group controlId="formBasicEmail">
           <Form.Control
             id="title"
